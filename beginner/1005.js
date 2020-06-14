@@ -1,4 +1,4 @@
-"""
+/*
 Read two floating points' values of double precision A and B, corresponding
 to two student's grades. After this, calculate the student's average,
 considering that grade A has weight 3.5 and B has weight 7.5.
@@ -16,21 +16,22 @@ Print MEDIA(average in Portuguese) according to the following example,
 with 5 digits after the decimal point and with a blank space before and
 after the equal signal.
 ---
-N1 = float(input())
-N2 = float(input())
-MEDIA = ((N1 * 3.5) + (N2 * 7.5))/11
-print("MEDIA = {0:.5f}".format(MEDIA))
+var N1 = parseFloat(lines.shift())
+var N2 = parseFloat(lines.shift())
+var MEDIA = ((N1 * 3.5) + (N2 * 7.5))/11
+console.log('MEDIA = ' + MEDIA.toFixed(5))  
 ---
->>> response(5.0, 7.1)
+> response(5.0, 7.1)
 MEDIA = 6.43182
 
->>> response(0.0, 7.1)
+> response(0.0, 7.1)
 MEDIA = 4.84091
 
->>> response(10.0, 10.0)
+> response(10.0, 10.0)
 MEDIA = 10.00000
-"""
+*/
 
-def response(N1, N2):
-    MEDIA = ((N1 * 3.5) + (N2 * 7.5))/11
-    print("MEDIA = {0:.5f}".format(MEDIA))
+function response(N1, N2) {
+    var MEDIA = ((N1 * 3.5) + (N2 * 7.5)) / 11
+    console.log('MEDIA = ' + MEDIA.toFixed(5))
+}
